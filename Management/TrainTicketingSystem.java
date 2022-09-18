@@ -8,7 +8,7 @@ package Management;
 import Asset.Schedule;
 import Asset.Ticket;
 import static Management.Menu.logo;
-import Personnal.Customer;
+import Personnel.Customer;
 import Registration.Registration;
 import java.io.IOException;
 import java.util.InputMismatchException;
