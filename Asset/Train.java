@@ -10,7 +10,7 @@ import Personnel.Driver;
 import Personnel.Customer;
 
 
-enum BusStatus {
+enum TrainStatus {
     Early,
     OnTime,
     Delay,
@@ -22,7 +22,7 @@ public class Train {
     private Driver driver;
     private ArrayList<Customer> customerList;
 
-    private static int nextBusID = 1000;
+    private static int nextTrainID = 1000;
 
     public Bus(int trainNo, Driver driver) {
         this.trainNo = trainNo;
@@ -30,7 +30,7 @@ public class Train {
     }
 
     public Train(Driver driver) {
-        this.busNo = Bus.nextBusID;
+        this.trainNo = Train.nextTrainID;
         this.driver = driver;
         this.customerList = new ArrayList<>();
     }
