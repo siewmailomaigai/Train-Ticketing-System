@@ -8,10 +8,6 @@ package Asset;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-/**
- *
- * @author Qzheng
- */
 public class Schedule {
 
     public String startLocation;
