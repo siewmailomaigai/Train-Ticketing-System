@@ -8,15 +8,15 @@ package Personnel;
 import Management.BusTicketingSystem;
 import Asset.Schedule;
 import Asset.Ticket;
-import Asset.Bus;
-import payment.Card;
-import payment.Payment;
+import Asset.Train;
+import Payment.Card;
+import Payment.Payment;
 import Reservation.Reservation;
 
-import Asset.Bus;
+import Asset.Train;
 import Personnel.Person;
 import Personnel.Driver;
-import Asset.Bus;
+import Asset.Train;
 import Reservation.Reservation;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,7 +34,7 @@ public class Customer extends Person implements Reservation {
     private static ArrayList<Customer> customerList = new ArrayList<>();
     private static int nextID = 1000;
     private Ticket ticket;
-    private Bus bus;
+    private Train train;
     private Card card;
     private ArrayList<Schedule> scheduleList;
 
