@@ -3,12 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Personnal;
+package Personnel;
 
-/**
- *
- * @author KUNG WEI XIN
- */
+
 public class Driver extends Person {
 
     String driverID;
