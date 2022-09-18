@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Personnal;
+package Personnel;
 
 import Management.BusTicketingSystem;
 import Asset.Schedule;
@@ -14,8 +14,8 @@ import payment.Payment;
 import Reservation.Reservation;
 
 import Asset.Bus;
-import Personnal.Person;
-import Personnal.Driver;
+import Personnel.Person;
+import Personnel.Driver;
 import Asset.Bus;
 import Reservation.Reservation;
 import java.util.ArrayList;
@@ -132,12 +132,12 @@ public class Customer extends Person implements Reservation {
         this.ticket = ticket;
     }
 
-    public Bus getBus() {
-        return bus;
+    public Train getTrain() {
+        return train;
     }
 
-    public void setBus(Bus bus) {
-        this.bus = bus;
+    public void setTrain(Train train) {
+        this.train = train;
     }
 
     public Card getCard() {
@@ -146,7 +146,7 @@ public class Customer extends Person implements Reservation {
 
     public String toString() {
         return String.format("%-30s %-10s %-5d %-15s %-15s",
-                custName, custID, reserveSeatNo, bus, ticket);
+                custName, custID, reserveSeatNo, train, ticket);
 
     }
 
@@ -187,11 +187,11 @@ public class Customer extends Person implements Reservation {
                 System.out.println("\t\t\t *====================================================================================================================*");
                 System.out.println("\t\t\t |                        Destination  List                                                                           |");
                 System.out.println("\t\t\t *====================================================================================================================*");
-                System.out.println("\t\t\t |     Destination                                    |     Time      |     Price     |      Driver     |     Bus     |");
+                System.out.println("\t\t\t |     Destination                                    |     Time      |     Price     |      Driver     |    Train    |");
                 System.out.println("\t\t\t *====================================================================================================================*");
                 for (int i = 0; i < Schedule.scheduleList.size(); i++) {
                     Schedule schedule = Schedule.scheduleList.get(i);
-                    System.out.printf("\t\t\t |  [%d] %-20s --> %-20s |    %-5s      |    RM%d       |      BD%-5s    |  %-10d |\n", i+1, schedule.getStartLocation(), schedule.getDestination(), schedule.getDepartureTime(), 10, Driver.getNextID()+i, Bus.getNextBusID()+i);
+                    System.out.printf("\t\t\t |  [%d] %-20s --> %-20s |    %-5s      |    RM%d       |      BD%-5s    |  %-10d |\n", i+1, schedule.getStartLocation(), schedule.getDestination(), schedule.getDepartureTime(), 10, Driver.getNextID()+i, Train.getNextBusID()+i);
                 }
                 System.out.println("\t\t\t *=====================================================================================================================*");
                 System.out.println(""); // new line
@@ -258,7 +258,7 @@ public class Customer extends Person implements Reservation {
             System.out.println("\t\t\t\t\tColumn : " + y);
 
             if ((x > 0 && y > 0)) {
-                System.out.println("\n \t\t\t\t\t\t Bus Seat Reservation ");
+                System.out.println("\n \t\t\t\t\t\t Train Seat Reservation ");
                 System.out.println("\t\t\t\t\t-------------------------------------------------");
 
                 for (int colNum = 1; colNum <= 2; colNum++) {
