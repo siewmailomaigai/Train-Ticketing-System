@@ -22,10 +22,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-/**
- *
- * @author JEhew
- */
+
 public class Customer extends Person implements Reservation {
 
     private String custName;
