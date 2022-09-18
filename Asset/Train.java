@@ -6,57 +6,54 @@
 package Asset;
 
 import java.util.ArrayList;
-import Personnal.Driver;
-import Personnal.Customer;
+import Personnel.Driver;
+import Personnel.Customer;
 
-/**
- *
- * @author JEhew
- */
+
 enum BusStatus {
     Early,
     OnTime,
     Delay,
 }
 
-public class Bus {
+public class Train {
 
-    private int busNo;
+    private int trainNo;
     private Driver driver;
     private ArrayList<Customer> customerList;
 
     private static int nextBusID = 1000;
 
-    public Bus(int busNo, Driver driver) {
-        this.busNo = busNo;
+    public Bus(int trainNo, Driver driver) {
+        this.trainNo = trainNo;
         this.driver = driver;
     }
 
-    public Bus(Driver driver) {
+    public Train(Driver driver) {
         this.busNo = Bus.nextBusID;
         this.driver = driver;
         this.customerList = new ArrayList<>();
     }
 
-    public int getBusNo() {
-        return busNo;
+    public int getTrainNo() {
+        return trainNo;
     }
 
-    public void setBusNo(int busNo) {
-        this.busNo = busNo;
+    public void setTrainNo(int trainNo) {
+        this.trainNo = trainNo;
     }
 
-    public static int getNextBusID() {
-        return nextBusID;
+    public static int getNextTrainID() {
+        return nextTrainID;
     }
 
-    public static void setNextBusID(int nextBusID) {
-        Bus.nextBusID = nextBusID;
+    public static void setNextTrainID(int nextTrainID) {
+        Train.nextTrainID = nextTrainID;
     }
 
     
     public String toString() {
-        return String.format("%-5d %-15s %-5d ", busNo, driver);
+        return String.format("%-5d %-15s %-5d ", trainNo, driver);
 
     }
 
