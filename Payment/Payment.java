@@ -3,17 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package payment;
+package Payment;
 
 import Asset.Ticket;
-import Personnal.Customer;
+import Personnel.Customer;
 import java.io.IOException;
 import java.util.Scanner;
-import payment.Receipt;
+import Payment.Receipt;
+
 /**
  *
- * @author KUNG WEI XIN
+ * @author 60192
  */
+
 public interface Payment {
 
      public static boolean performPayment(Customer customer, Ticket ticket) {
