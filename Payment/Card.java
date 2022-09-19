@@ -3,11 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package payment;
+package Payment;
 
 import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+/**
+ *
+ * @author 60192
+ */
 
 public class Card {
 
@@ -41,7 +46,8 @@ public class Card {
     public void setBalance(double balance) {
         this.balance = balance;
     }
-
+    
+    @Override
     public String toString() {
         return String.format("%-20s %-15s %-5d ", cardNum, expiryDate, cvv);
 
@@ -61,3 +67,4 @@ public class Card {
     }
 
 }
+
