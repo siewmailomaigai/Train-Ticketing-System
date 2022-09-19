@@ -5,6 +5,11 @@
  */
 package Reservation;
 
+/**
+ *
+ * @author 60192
+ */
+
 public interface Reservation {
 
     public void reserveTicket();
