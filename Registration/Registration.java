@@ -5,11 +5,16 @@
  */
 package Registration;
 
-import Management.BusTicketingSystem;
-import payment.Card;
-import Personnal.Customer;
+import Management.TrainTicketingSystem;
+import Payment.Card;
+import Personnel.Customer;
 import java.util.Calendar;
 import java.util.Scanner;
+
+/**
+ *
+ * @author 60192
+ */
 
 public interface Registration {
 
