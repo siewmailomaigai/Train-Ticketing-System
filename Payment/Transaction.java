@@ -3,9 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package payment;
+package Payment;
 
 import Asset.Ticket;
+
+/**
+ *
+ * @author 60192
+ */
 
 abstract public class Transaction implements Payment {
 
