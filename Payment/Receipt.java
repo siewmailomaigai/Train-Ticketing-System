@@ -3,14 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package payment;
+package Payment;
 
 import Asset.Ticket;
-import Personnal.Customer;
+import Personnel.Customer;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
+
+/**
+ *
+ * @author 60192
+ */
 
 public class Receipt extends Transaction{
 
