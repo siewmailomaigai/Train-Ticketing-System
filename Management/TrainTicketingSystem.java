@@ -14,8 +14,12 @@ import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
-import payment.Payment;
+import Payment.Payment;
 
+/**
+ *
+ * @author 60192
+ */
 interface Flags {
 
     static final int NO_LOGIN = 0;
@@ -67,12 +71,12 @@ interface Menu {
         System.out.println("\t\t\t\t\tHAVE A NICE DAY!!!!");
     }
 
-    static void logo() {
-        System.out.println("\t\t\t _____ _____  ___ ___ _______ __ ______ ___ ___ _  _____ _____ ___ _  _  ___   _____   _____ _____ ___ __  __ ");
-        System.out.println("\t\t\t|_   _| [ ] )  //_\\  | |        |_   _|_ _/ __| |/ / __|_   _|_ _| \\| |/ __| / __\\ \\ / / __|_   _| __|  \\/  |");
-        System.out.println("\t\t\t| | |  |    \ //___\\ | |          | | |  | | (__| ' <| _|  | |  | || .` | (_ | \\__ \\\\ V /\\__ \\ | | | _|| |\\/| |");
-        System.out.println("\t\t\t| |_|  |_|\_|//     \\|_|          |_| |___\\___|_|\\_\\___| |_| |___|_|\\_|\\___| |___/ |_| |___/ |_| |___|_|  |_|");
-        System.out.println("");
+     static void logo() {               
+        System.out.println("\t\t\t  ___         _____ ___ ___ _  _____ _____ ___ _  _  ___   _____   _____ _____ ___ __  __ ");
+        System.out.println("\t\t\t |   |____   |_   _|_ _/ __| |/ / __|_   _|_ _| \\| |/ __| / __\\ \\ / / __|_   _| __|  \\/  |");
+        System.out.println("\t\t\t||         )   | |  | | (__| ' <| _|  | |  | || .` | (_ | \\__ \\\\ V /\\__ \\ | | | _|| |\\/| |");
+        System.out.println("\t\t\t||________\\    |_| |___\\___|_|\\_\\___| |_| |___|_|\\_|\\___| |___/ |_| |___/ |_| |___|_|  |_|");
+        System.out.println("\t\t\t |(  )(  )|");
     }
 }
 
