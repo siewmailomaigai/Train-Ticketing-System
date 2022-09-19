@@ -5,6 +5,11 @@
  */
 package Personnel;
 
+/**
+ *
+ * @author 60192
+ */
+
 public class Person {
 
     private String name;
