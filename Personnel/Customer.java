@@ -5,7 +5,7 @@
  */
 package Personnel;
 
-import Management.BusTicketingSystem;
+import Management.TrainTicketingSystem;
 import Asset.Schedule;
 import Asset.Ticket;
 import Asset.Train;
@@ -22,6 +22,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ *
+ * @author 60192
+ */
 
 public class Customer extends Person implements Reservation {
 
@@ -188,7 +192,7 @@ public class Customer extends Person implements Reservation {
                 System.out.println("\t\t\t *====================================================================================================================*");
                 for (int i = 0; i < Schedule.scheduleList.size(); i++) {
                     Schedule schedule = Schedule.scheduleList.get(i);
-                    System.out.printf("\t\t\t |  [%d] %-20s --> %-20s |    %-5s      |    RM%d       |      BD%-5s    |  %-10d |\n", i+1, schedule.getStartLocation(), schedule.getDestination(), schedule.getDepartureTime(), 10, Driver.getNextID()+i, Train.getNextBusID()+i);
+                    System.out.printf("\t\t\t |  [%d] %-20s --> %-20s |    %-5s      |    RM%d       |      BD%-5s    |  %-10d |\n", i+1, schedule.getStartLocation(), schedule.getDestination(), schedule.getDepartureTime(), 10, Driver.getNextID()+i, Train.getNextTrainID()+i);
                 }
                 System.out.println("\t\t\t *=====================================================================================================================*");
                 System.out.println(""); // new line
