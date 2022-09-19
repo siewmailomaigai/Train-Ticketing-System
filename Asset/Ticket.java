@@ -5,6 +5,12 @@
  */
 package Asset;
 
+
+/**
+ *
+ * @author 60192
+ */
+
 public class Ticket {
 
     private final static double DEFAULT_PRICE = 10;
