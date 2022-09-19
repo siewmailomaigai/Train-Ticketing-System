@@ -9,6 +9,10 @@ import java.util.ArrayList;
 import Personnel.Driver;
 import Personnel.Customer;
 
+/**
+ *
+ * @author 60192
+ */
 
 enum TrainStatus {
     Early,
@@ -24,7 +28,7 @@ public class Train {
 
     private static int nextTrainID = 1000;
 
-    public Bus(int trainNo, Driver driver) {
+    public Train(int trainNo, Driver driver) {
         this.trainNo = trainNo;
         this.driver = driver;
     }
