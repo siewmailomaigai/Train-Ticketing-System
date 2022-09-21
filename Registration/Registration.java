@@ -173,27 +173,22 @@ public interface Registration {
         Scanner scanner = new Scanner(System.in);
         String cardNum;
         int cvv;
-        Calendar expiryDate = Calendar.getInstance();
+        
 
         System.out.print("\n\t\t\t\t\tEnter your Card number >");
         cardNum = scanner.nextLine();
-
+        
         System.out.print("\n\t\t\t\t\tEnter your Card expiry date (month)>");
-        int month = scanner.nextInt();
-        --month;
+        int userInputMonth = scanner.nextInt();
+        scanner.nextLine();
+       
         System.out.print("\n\t\t\t\t\tEnter your Card expiry date (year)>");
-        int year = scanner.nextInt();
-
-        expiryDate.set(Calendar.MONTH, month);
-        expiryDate.set(Calendar.YEAR, year);
-
+        String userInputYear = scanner.nextLine();
+  
         System.out.print("\n\t\t\t\t\tEnter you Card cvv number >");
         cvv = scanner.nextInt();
 
-        int monthExpiryDate = expiryDate.get(Calendar.MONTH) + 1;
-        int yearExpiryDate = expiryDate.get(Calendar.YEAR);
-
-        Card card = new Card(cardNum, expiryDate, cvv);
+        Card card = new Card(cardNum, userInputMonth, userInputYear, cvv);
         return Card.validateCard(card) ? card : null;
     }
 
