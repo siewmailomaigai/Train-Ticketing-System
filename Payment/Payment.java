@@ -7,6 +7,7 @@ package Payment;
 
 import Asset.Ticket;
 import Personnel.Customer;
+import Personnel.Report;
 import java.io.IOException;
 import java.util.Scanner;
 import Payment.Receipt;
@@ -51,10 +52,11 @@ public interface Payment {
             System.out.printf("\t\t\t\t\tCurrent Balance: %.2f\n", balance);
             System.out.print("\t\t\t\t\tEnter total: ");
             double inputTotal = scan.nextDouble();
-            if (inputTotal < total) {
-                System.out.println("\t\t\t\t\tInsufficient amount entered!");
+            if (inputTotal != total) {
+                System.out.println("\t\t\t\t\tKey in the exact amount!");
                 return false;
             }
+                
             balance -= total;
             customer.getCard().setBalance(balance);
             System.out.println("\t\t\t\t\tPayment Successful!");
@@ -62,6 +64,7 @@ public interface Payment {
             ticket.setPaidStatus(true);
             System.out.println("");
             System.out.println(Receipt.printReceipt(ticket, customer));
+            
         }
         System.out.println("\t\t\t\t\tAll ticket has been paid");
         return true;
